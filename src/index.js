@@ -1,5 +1,14 @@
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { NautsProvider } from "components";
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <BrowserRouter>
+    <NautsProvider>
+      {/* <NavBar /> */}
+      <App />
+    </NautsProvider>
+  </BrowserRouter>
+);
